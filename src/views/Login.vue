@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="login-wrapper">
         <form @submit.prevent="auth">
             <div>
                 <label for="login">Login</label>
@@ -34,3 +34,11 @@ export default {
   }
 }
 </script>
+
+<style>
+
+.login-wrapper{
+    text-align: center;
+}
+
+</style>

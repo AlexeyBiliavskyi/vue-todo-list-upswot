@@ -14,7 +14,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/todo',
+    path: '/todo/:userId',
     name: 'Todo',
     component: Todo
   },

@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="onSubmit">
         <input type="text" v-model="title">
-        <button type="submit">Добавить</button>
+        <button class="add-todo-item__btn" type="submit">Добавить</button>
     </form>
 </template>
 
@@ -15,12 +15,7 @@ export default {
     methods: {
         onSubmit() {
             if (this.title.trim()) {
-                const newTodoItem = {
-                    id: Date.now(),
-                    title: this.title,
-                    completed: false
-                }
-                this.$emit('add-todo-item', newTodoItem);
+                this.$emit('add-todo-item', this.title);
                 this.title = '';
             }
         }
@@ -36,5 +31,9 @@ export default {
     }
     input {
         width: 450px
+    }
+    .add-todo-item__btn {
+        background-color:greenyellow;
+        color: indigo;
     }
 </style>
